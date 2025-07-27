@@ -8,8 +8,8 @@ const Contact = ({
 
 
         <div className='flex flex-col gap-2'>
-           <h1 className='font-bold text-2xl'>{name}</h1> 
-            <p className='font-semibold text-gray-500'>{address}</p>
+           <h1 className='font-bold text-[28px]'>{name}</h1> 
+            <p className='font-semibold text-gray-500 text-[20px]'>{address}</p>
         </div>
 
     

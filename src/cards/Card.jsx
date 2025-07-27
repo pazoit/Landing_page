@@ -13,7 +13,7 @@ const Card = ({
           <h1 className="text-primaryColor-500 font-bold text-2xl text-center">
             {title}
           </h1>
-          <div className='flex flex-col justify-center '>
+          <div className='flex flex-col justify-center'>
             <div className='flex justify-center'>
                  <hr className='bg-primaryColor-500 w-13 h-1 border-none' />
             </div>

@@ -14,7 +14,13 @@ import Contact from './contact/Contact';
 import { MdOutlineEmail } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
 import { LuPhoneCall } from "react-icons/lu";
-import ContactForm from './contact/ContactForm';
+import { MdOutlineDashboard } from "react-icons/md";
+import { SlSocialFacebook } from "react-icons/sl";
+import { SlSocialTwitter } from "react-icons/sl";
+import { SlSocialLinkedin } from "react-icons/sl";
+import { FaInstagram } from "react-icons/fa";
+import ContactFooter from './contact/ContactFooter';
+
 
 function App() {
 const Cards=[
@@ -53,9 +59,16 @@ const services=[
     define:"Parking Area",
     description:"Lorem ipsum dolor sit amet, cn consectetur adipiscing elit.",
   },
-
-
  
+];
+const links=[
+  {
+    title:"Quick Links",
+    Home:"Home",
+    space:"space",
+    about:"about",
+    contact:"contact",
+  },
 ];
 
 const catalog=[
@@ -92,6 +105,11 @@ const Phone=[
   {
     name:"Phone",
     address:"+250788183828",
+  },
+];
+const info=[
+  {
+    title:"Contact Info",
   },
 ];
 
@@ -150,13 +168,13 @@ const Phone=[
         <div className='flex flex-col gap-8'>
             <div>
                   <h1 className='font-bold text-2xl text-primaryColor-600'>Contact Us</h1> 
-                  <p className='font-bold text-4xl'>Say Hello</p> 
+                  <p className='font-bold text-5xl'>Say Hello</p> 
             </div>
           
             <div className='flex gap-3'>
-              <div className='border-1 w-[4.5rem] h-[4.5rem] text-black rounded-[36px] border-dashed  flex justify-center items-center'>
+              <div className='border-1 w-[5.5rem] h-[5.5rem] border-primaryColor-600 rounded-[45px] border-dashed  flex justify-center items-center'>
 
-                    <CiLocationOn className='w-[4rem] h-[4rem] bg-primaryColor-600 rounded-[36px] p-4'/>
+                    <CiLocationOn className='w-[4.5rem] h-[4.5rem] bg-primaryColor-600 rounded-[36px] p-4'/>
                   </div>
                   {addresses.map((addresses,index)=>(
                       <Contact
@@ -168,8 +186,8 @@ const Phone=[
                 ))} 
             </div>
             <div className='flex gap-3'>
-              <div className='border-1 w-[4.5rem] h-[4.5rem] text-black rounded-[36px] border-dashed  flex justify-center items-center'>
-                  <MdOutlineEmail className='w-[4rem] h-[4rem] bg-primaryColor-600 rounded-[36px] p-4'/>
+              <div className='border-1 w-[5.5rem] h-[5.5rem] border-primaryColor-600 rounded-[45px] border-dashed  flex justify-center items-center'>
+                  <MdOutlineEmail className='w-[4.5rem] h-[4.5rem] bg-primaryColor-600 rounded-[36px] p-4'/>
               </div>
                   
                   {Email.map((Email,index)=>(
@@ -183,8 +201,8 @@ const Phone=[
             </div>
             
           <div className='flex gap-3'>
-                  <div className='border-1 w-[4.5rem] h-[4.5rem] text-black rounded-[36px] border-dashed  flex justify-center items-center'>
-                      <LuPhoneCall className='w-[4rem] h-[4rem] bg-primaryColor-400 rounded-[36px] p-2'/>
+                  <div className='border-1 w-[5.5rem] h-[5.5rem] border-primaryColor-600 rounded-[45px] border-dashed  flex justify-center items-center'>
+                      <LuPhoneCall className='w-[4.5rem] h-[4.5rem] bg-primaryColor-600 rounded-[36px] p-2'/>
                   </div>
                   
                   {Phone.map((Phone,index)=>(
@@ -203,14 +221,78 @@ const Phone=[
             <p className='font-bold text-4xl'>Send a Message</p>
             </div>
                       <form action="" className="flex flex-col gap-2">
-                        <input className='rounded-[18px] border-1 border-primaryColor-600  h-[3rem]' type="text" placeholder='name'/>
-                        <input className='rounded-[18px] border-1 border-primaryColor-600  h-[3rem]' type="text" placeholder='email'/>
-                        <input className='rounded-[18px] border-1 border-primaryColor-600  h-[3rem]' type="text" placeholder='subject'/>
-                        <textarea className='rounded-[18px] border-1 border-primaryColor-600 h-[5rem]' type="text" placeholder='message'/>
-                        <button></button>
+                        <input className='rounded-[10px] border-1 border-primaryColor-600  h-[3rem] font-bold' type="text" placeholder='name'/>
+                        <input className='rounded-[10px] border-1 border-primaryColor-600  h-[3rem] font-bold' type="text" placeholder='email'/>
+                        <input className='rounded-[10px] border-1 border-primaryColor-600  h-[3rem] font-bold' type="text" placeholder='subject'/>
+                        <textarea className='rounded-[10px] border-1 border-primaryColor-600 h-[5rem] font-bold' type="text" placeholder='send message'/>
+                        <button className='bg-primaryColor-600 h-[3rem] w-[9rem] rounded-[10px]'><p className='font-bold text-white'>send message</p></button>
                       </form>
           </div>
       </div>
+      <div className='border-t-1 border-b-1 border-t-primaryColor-600 border-b-primaryColor-600 grid grid-cols-3 justify-between gap-8 h-[18rem] p-8'>
+        <div className='flex flex-col gap-4'>
+          <div className='flex justify-between  w-55 items-center'>
+              <MdOutlineDashboard className='h-[2rem] w-[2rem] text-primaryColor-600'/>
+              <h1 className='font-bold h-2rem text-2xl flex gap-2  w-48 '><strong>Business</strong><span className='text-primaryColor-600'>Cafe</span></h1>
+          </div>
+          <p className='font-semibold text-1xl'>Discover your ideal workspace with us. Work 
+          smart, not hard in our fully-equipped office 
+          spaces.</p>
+          <div className='flex gap-3'>
+            <div className='border-1 rounded-[36px] border-primaryColor-600 p-2'>
+                <SlSocialFacebook className='h-[2rem] w-[2rem]  text-primaryColor-600'/>
+            </div>
+            <div className='border-1 rounded-[36px] border-primaryColor-600 p-2'>
+                <SlSocialTwitter className='h-[2rem] w-[2rem]  text-primaryColor-600'/>
+            </div>
+              <div className='border-1 rounded-[36px] border-primaryColor-600 p-2'>
+                <SlSocialLinkedin className='h-[2rem] w-[2rem]  text-primaryColor-600'/>
+            </div>
+                <div className='border-1 rounded-[36px] border-primaryColor-600 p-2'>
+                <FaInstagram className='h-[2rem] w-[2rem]  text-primaryColor-600'/>
+            </div>  
+          </div>
+        </div>
+        
+         {links.map((links,index)=>(
+                      <ContactFooter
+                      title={links.title} 
+                      Home={links.Home} 
+                      space={links.space} 
+                      about={links.about} 
+                      contact={links.contact} 
+                      key={index}
+                      >
+                      </ContactFooter>
+                  ))} 
+          <div className='flex flex-col '>
+              {info.map((info,index)=>(
+                      <ContactFooter
+                      title={info.title} 
+                      >
+                      </ContactFooter>
+                  ))} 
+                  <div className='flex flex-col gap-2'>
+                    <div className='flex'>
+                    <label className='font-bold ' htmlFor="">Location:</label>
+                    <p className='font-semibold'>Kigali,<span className='text-primaryColor-600'>Rwanda</span> </p>
+                    </div>
+                    <div className='flex'>
+                      <label className='font-bold ' htmlFor="">Email:</label>
+                      <p className='font-semibold '>businesscafe@info.com</p>
+                    </div>
+                    <div className='flex'>
+                      <label className='font-bold ' htmlFor="">Phone:</label>
+                      <p className='font-semibold'>+250783787817</p>
+                    </div>
+                    <p className='text-primaryColor-600'>View Location on GoogleMap</p>
+                  </div>
+                  
+          </div>
+
+       
+      </div>
+      <p className='font-semibold text-[20px] text-center'>Copyright © 2023 Business Coffee All rights reserved.</p>
     </>
   )
 }
