@@ -20,6 +20,7 @@ import { SlSocialTwitter } from "react-icons/sl";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { FaInstagram } from "react-icons/fa";
 import ContactFooter from './contact/ContactFooter';
+import ContactForm from './contact/ContactForm';
 
 
 function App() {
@@ -119,9 +120,9 @@ const info=[
       <Coffeebg/>
       {/* <Cards/> */}
       
-      <div className='flex  flex-col p-20 gap-8'>
+      <div className='flex  flex-col  gap-8 w-full pl-6 pr-6  '>
           <Content/>
-          <div className='flex justify-center items-center w-full gap-10 '>
+          <div className='grid grid-cols-1 large:grid-cols-3 justify-center items-center  gap-10  '>
             {Cards.map((Cards,index)=>(
                   <Card
                   image={Cards.image} 
@@ -136,11 +137,12 @@ const info=[
             ))} 
          </div>
       </div>
-      <div className='flex justify-center'>
-          <IoIosRadioButtonOn className='text-primaryColor-600 w-12 h-12' /><IoIosRadioButtonOff className='text-primaryColor-600 w-9 h-9'/>
+      <div className='flex justify-center p-5'>
+          <IoIosRadioButtonOn className='text-primaryColor-600 w-10 h-10' /><IoIosRadioButtonOff className='text-primaryColor-600
+           w-10 h-10'/>
       </div>
       <About/>
-      <div className='grid grid-cols-3 justify-between gap-10 p-12'>
+      <div className='grid  grid-cols-1  md:grid-cols-3 w-full justify-between gap-10 p-12'>
           <div className='flex flex-col justify-between gap-10'>
               {services.map((services,index)=>(
                     <Service
@@ -151,7 +153,7 @@ const info=[
                     </Service>
               ))} 
         </div>
-        <img src="coffeeroom.jpg" alt="" className='h-[50rem] w-[62rem]' />
+        <img src="coffeeroom.jpg" alt="" className='h-[50rem] ' />
         <div className='flex flex-col justify-between gap-10'>
             {catalog.map((catalog,index)=>(
                   <Service
@@ -164,7 +166,7 @@ const info=[
       </div>
       </div>
       <Footer/>
-      <div className='bg-[url(map.jpg) opacity-5]  gap-10 grid grid-cols-2 justify-between items-center p-28'>
+      <div className='bg-[url(map.jpg) opacity-5]  gap-10 grid-cols-1 grid md:grid-cols-2 justify-between items-center p-28'>
         <div className='flex flex-col gap-8'>
             <div>
                   <h1 className='font-bold text-2xl text-primaryColor-600'>Contact Us</h1> 
@@ -220,17 +222,20 @@ const info=[
             <h1 className='font-bold text-primaryColor-600'>Have Question ?</h1>
             <p className='font-bold text-4xl'>Send a Message</p>
             </div>
-                      <form action="" className="flex flex-col gap-2">
+            <ContactForm />
+
+
+                      {/* <form action="" className="flex flex-col gap-2">
                         <input className='rounded-[10px] border-1 border-primaryColor-600  h-[3rem] font-bold' type="text" placeholder='name'/>
                         <input className='rounded-[10px] border-1 border-primaryColor-600  h-[3rem] font-bold' type="text" placeholder='email'/>
                         <input className='rounded-[10px] border-1 border-primaryColor-600  h-[3rem] font-bold' type="text" placeholder='subject'/>
                         <textarea className='rounded-[10px] border-1 border-primaryColor-600 h-[5rem] font-bold' type="text" placeholder='send message'/>
                         <button className='bg-primaryColor-600 h-[3rem] w-[9rem] rounded-[10px]'><p className='font-bold text-white'>send message</p></button>
-                      </form>
+                      </form> */}
           </div>
       </div>
-      <div className='border-t-1 border-b-1 border-t-primaryColor-600 border-b-primaryColor-600 grid grid-cols-3 justify-between gap-8 h-[18rem] p-8'>
-        <div className='flex flex-col gap-4'>
+      <div className='border-t-1 border-b-1 border-t-primaryColor-600 border-b-primaryColor-600 grid grid-cols-1 md:grid-cols-3 justify-center gap-8  p-10 '>
+       <div className='flex flex-col gap-4 '>
           <div className='flex justify-between  w-55 items-center'>
               <MdOutlineDashboard className='h-[2rem] w-[2rem] text-primaryColor-600'/>
               <h1 className='font-bold h-2rem text-2xl flex gap-2  w-48 '><strong>Business</strong><span className='text-primaryColor-600'>Cafe</span></h1>
@@ -292,7 +297,7 @@ const info=[
 
        
       </div>
-      <p className='font-semibold text-[20px] text-center'>Copyright © 2023 Business Coffee All rights reserved.</p>
+      <p className='font-semibold text-[20px] text-center p-5'>Copyright © 2023 Business Coffee All rights reserved.</p>
     </>
   )
 }

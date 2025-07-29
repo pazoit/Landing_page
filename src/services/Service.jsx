@@ -6,7 +6,7 @@ const Service = ({
 }) => {
   return (
     
-    <div className='bg-primaryColor-50 h-[15rem] w-[20rem] p-10 '>
+    <div className='bg-primaryColor-50 h-[15rem]  p-10 '>
         <div className='flex justify-center'>
             <SiBookstack className='bg-primaryColor-400 w-18 h-20 rounded-[35px] p-4 '/>
         </div>

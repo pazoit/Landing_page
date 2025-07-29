@@ -7,7 +7,7 @@ const Card = ({
     more,
 }) => {
   return (
-    <div className='flex flex-col gap-2 w-260 '>
+    <div className='flex flex-col gap-2 shadow'>
       <img src={image} className="w-full h-98" />
       <div className='flex flex-col gap-3'>
           <h1 className="text-primaryColor-500 font-bold text-2xl text-center">
